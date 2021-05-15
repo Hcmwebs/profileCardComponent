@@ -1,0 +1,25 @@
+@use'../abstracts/'as *;
+@use'./typo';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $fontStack;
+  font-size: $fontSize;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  @include grid(center);
+  background: url(/images/bg-pattern-top.svg) top left no-repeat, url(/images/bg-pattern-bottom.svg)bottom right no-repeat;
+  background-size: 50%,50%;
+  background-color: $bgColor;
+}
+
+.container{
+  width: 80%;
+  max-width: 1440px;
+  min-height: 100vh;
+  @include grid(center);
+}

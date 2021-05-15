@@ -1,0 +1,33 @@
+@use '../abstracts/' as *;
+
+.card{
+  width: 100%;
+  max-width: 350px;
+  border-radius: $borderRadius;
+  border: none;
+  box-shadow: $boxShadow;
+  overflow: hidden;
+
+  &__header{
+    width: 100%;
+    min-height: 15rem;
+    @include grid(center);
+    position: relative;
+    background:url(/images/bg-pattern-card.svg);
+
+
+    img{
+      width: 9.6rem;
+      height: 9.6rem;
+      object-fit: cover;
+      border: 0.3rem solid rgba(255, 255, 255, 1.0);
+      border-radius: 50%;
+      transform:translate(110%, 50%);
+    }
+  }
+
+  &__body{
+
+  }
+
+}
