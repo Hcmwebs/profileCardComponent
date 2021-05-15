@@ -12,8 +12,8 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: url(/images/bg-pattern-top.svg) top left no-repeat, url(/images/bg-pattern-bottom.svg) bottom right no-repeat;
-  background-size: 50%, 50%;
+  background: url(/images/bg-pattern-top.svg) -200px -150px no-repeat, url(/images/bg-pattern-bottom.svg) 168px 450px no-repeat;
+  background-size: contain, contain;
   background-color: #19a1ae;
 }
 
@@ -47,7 +47,10 @@ body {
   object-fit: cover;
   border: 0.3rem solid white;
   border-radius: 50%;
-  transform: translate(110%, 50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 /*# sourceMappingURL=styles.css.map */

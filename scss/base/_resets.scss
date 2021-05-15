@@ -12,8 +12,8 @@ body{
   width: 100%;
   min-height: 100vh;
   @include grid(center);
-  background: url(/images/bg-pattern-top.svg) top left no-repeat, url(/images/bg-pattern-bottom.svg)bottom right no-repeat;
-  background-size: 50%,50%;
+  background: url(/images/bg-pattern-top.svg) -200px -150px no-repeat, url(/images/bg-pattern-bottom.svg)168px 450px no-repeat;
+  background-size: contain,contain;
   background-color: $bgColor;
 }
 
