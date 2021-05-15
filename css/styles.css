@@ -12,37 +12,10 @@ strong {
   font-weight: 700;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Kumbh Sans", sans-serif;
-  font-size: 10px;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  background: url(/images/bg-pattern-top.svg) -200px -150px no-repeat, url(/images/bg-pattern-bottom.svg) 168px 450px no-repeat;
-  background-size: contain, contain;
-  background-color: #19a1ae;
-}
-
-.container {
-  width: 80%;
-  max-width: 1440px;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
 .card {
   width: 100%;
   max-width: 350px;
-  min-height: 375px;
-  border-radius: 0.4rem;
+  border-radius: 1.5rem;
   border: none;
   box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -68,13 +41,19 @@ body {
 }
 .card__body {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0;
   background-color: #fff;
   display: grid;
   place-items: center;
+  gap: 1rem;
 }
 .card__body .profileInfo {
-  margin-top: 3rem;
+  margin: 3.5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
 }
 .card__body .profileInfo .nameAge {
   display: flex;
@@ -82,6 +61,103 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+.card__body .profileInfo .nameAge small {
+  font-size: 1.8rem;
+}
+.card__body .profileInfo small {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.card__body .separator {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #e8e9ec;
+}
+.card__body .profileStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 0;
+}
+.card__body .profileStats__item {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.card__body .profileStats__item strong {
+  font-size: 1.8rem;
+  color: #2e3349;
+}
+.card__body .profileStats__item small {
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  color: #6b7082;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  cursor: pointer;
+  color: #3e52a3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #19a1ae;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  padding: 0 2.5rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.container :before,
+.container ::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.container :before {
+  top: -150px;
+  left: -60%;
+  background: url(/images/bg-pattern-top.svg) top center no-repeat;
+  background-size: contain;
+}
+.container ::after {
+  bottom: 150px;
+  right: -60%;
+  background: url(/images/bg-pattern-bottom.svg) bottom center no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .container::before,
+.container::after {
+    background-size: 50%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
