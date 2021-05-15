@@ -3,6 +3,7 @@
 .card{
   width: 100%;
   max-width: 350px;
+  min-height: 375px;
   border-radius: $borderRadius;
   border: none;
   box-shadow: $boxShadow;
@@ -30,6 +31,21 @@
   }
 
   &__body{
+  width: 100%;
+  padding:2rem;
+  background-color: #fff;
+  @include grid(center);
+
+  .profileInfo{
+    margin-top: 3rem;
+
+    .nameAge{
+      @include flex(row,center,center);
+      gap: 1rem;
+
+    }
+
+  }
 
   }
 
