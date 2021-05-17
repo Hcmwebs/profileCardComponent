@@ -1,0 +1,11 @@
+@use '../abstracts/'as *;
+
+.attribution{
+  font-size: 1.1rem;
+  text-align: center;
+
+  a{
+    cursor: pointer;
+    color: $attLinksColor;
+  }
+}
