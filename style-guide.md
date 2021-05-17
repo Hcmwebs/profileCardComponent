@@ -1,4 +1,4 @@
-# Front-end Style Guide
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap') Front-end Style Guide
 
 ## Layout
 
